@@ -9,5 +9,17 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = '215-app';
+  title = 'Zoe';
+  day!: string;
+
+  ngOnInit() {
+    this.day = this.getDayOfWeek();
+  }
+
+  getDayOfWeek(): string {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const today = new Date();
+    return days[today.getDay()];
+  }
 }
+
