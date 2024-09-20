@@ -1,8 +1,11 @@
 
       <h1>Hello, {{ title }}</h1>
       <p>Today is {{day!}}. </p>
-      <app-profile-page></app-profile-page>
-   
-
+      
+      <ul>
+            <li><a routerLink="/app-profile-page">My Profile Page</a></li>
+            <li><a routerLink="/app-interests">My Interests</a></li>
+      </ul>
+   <app-footer></app-footer>
 
 <router-outlet />

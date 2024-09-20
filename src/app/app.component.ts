@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, Routes } from '@angular/router';
+import { ProfilePageComponent } from './profile-page/profile-page.component';//Import ProfilePageComponent
+import { InterestsComponent } from './interests/interests.component';//Import InterestsComponent
+import { FooterComponent} from './shared/footer/footer.component';//Import FooterComponent
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterModule, InterestsComponent, ProfilePageComponent, FooterComponent, RouterLink, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Zoe';
