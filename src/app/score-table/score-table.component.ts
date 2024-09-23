@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FooterComponent } from '../shared/footer/footer.component';
 
 @Component({
-  selector: 'app-profile-page',
+  selector: 'app-score-table',
   standalone: true,
   imports: [FooterComponent],
-  templateUrl: './profile-page.component.html',
-  styleUrls: ['./profile-page.component.css']
+  templateUrl: './score-table.component.html',
+  styleUrl: './score-table.component.css'
 })
-export class ProfilePageComponent {
+export class ScoreTableComponent {
 
 }
