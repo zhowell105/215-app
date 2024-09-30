@@ -1,5 +1,25 @@
 <h1>Trojan Scores</h1>
+
+<app-score-form></app-score-form>
 <table>
+    <thead>
+        <tr>
+            <th>Week</th>
+            <th>Opponent</th>
+            <th>Score</th>
+            <th>Best</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of games">
+            <th>{{game.week}}</th>
+            <td>{{game.opponent}}</td>
+            <td>{{game.ourScore}}-{{game.theirScore}}</td>
+            <td>{{game.outstandingPlayer}}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- <table>
     <caption>Trojan Football Scores</caption>
     <thead>
     <tr>
@@ -56,7 +76,7 @@
                 <li>LenDale</li>
             </ol>
         </td> -->
-        <td>
+        <!-- <td>
             <table>
                 <tr>
                     <th>Us</th>
@@ -83,4 +103,4 @@
         <td>Box Score Very Empty</td>
     </tr>
 </tbody>
-</table>
+</table> --> 
