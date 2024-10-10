@@ -9,12 +9,12 @@ interface Game{
 }
 import { FooterComponent } from '../shared/footer/footer.component';
 import { NgFor } from '@angular/common';
-import { ScoreFormComponent } from '../score-form/score-form.component';
+import { ScoresFormBetaComponent } from '../scores-form-beta/scores-form-beta.component';
 
 @Component({
   selector: 'app-score-table',
   standalone: true,
-  imports: [FooterComponent, NgFor, ScoreFormComponent],
+  imports: [FooterComponent, NgFor, ScoresFormBetaComponent],
   templateUrl: './score-table.component.html',
   styleUrl: './score-table.component.css'
 })
@@ -27,4 +27,7 @@ export class ScoreTableComponent {
     {week:4,opponent: "Limestone", ourScore: 3, theirScore: 0, outstandingPlayer: "Jane Doe"},
   ];
 
+  addNewGameToTable(newGame: Game){
+    this.games.push(newGame);
+  }
 }
