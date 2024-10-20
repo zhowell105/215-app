@@ -1,6 +1,5 @@
 <h1>Trojan Scores</h1>
-
-<app-scores-form-beta (newGameAdded)="addNewGameToTable($event)"></app-scores-form-beta>
+<app-scores-form-beta></app-scores-form-beta>
 <table>
     <thead>
         <tr>
@@ -12,10 +11,11 @@
     </thead>
     <tbody>
         <tr *ngFor="let game of games">
-            <th>{{game.week}}</th>
+            <td>{{game.week}}</td>
             <td>{{game.opponent}}</td>
             <td>{{game.ourScore}}-{{game.theirScore}}</td>
             <td>{{game.outstandingPlayer}}</td>
+            <td> <a [routerLink]="['/game-details', game.id]">Details</a></td>
         </tr>
     </tbody>
 </table>

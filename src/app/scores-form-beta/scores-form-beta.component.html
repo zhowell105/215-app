@@ -1,25 +1,26 @@
 <h3>Add a Score</h3>
-<form [formGroup]="scoreForm" (ngSubmit)="onSubmit">
+<form [formGroup]="scoreForm" (ngSubmit)="OnSubmit()">
     <div>
         <label for="week">Week</label>
-        <input type="number" id="week" name="week" formControlName="week">
+        <input type="number" id="week" formControlName="week">
     </div>
     <div>
         <label for="opponent">Opponent</label>
-        <input type="text" id="opponent" name="opponent" formControlName="opponent">
+        <input type="text" id="opponent" formControlName="opponent">
     </div>
     <div>
-        <label for="our-score">Our Score</label>
-        <input type="number" id="our-score" name="our-score" min="0" formControlName="our-score">
-        <label for="their-score">Their Score</label>
-        <input type="number" id="their-score" name="their-score" min="0" formControlName="their-score">
+        <label for="ourScore">Our Score</label>
+        <input type="number" id="ourScore" min="0" formControlName="ourScore">
     </div>
     <div>
-        <label for="outstanding players">Outstanding Players</label>
-        <input type= "text" id="outstanding-players" name="outstanding-players" formControlName="outstanding-players">
-     </div> 
+        <label for="theirScore">Their Score</label>
+        <input type="number" id="theirScore" min="0" formControlName="theirScore">
+    </div>
+    <div>
+        <label for="outstandingPlayers">Outstanding Players</label>
+        <input type="text" id="outstandingPlayers" formControlName="outstandingPlayers">
+    </div> 
     <div>
         <input type="submit" value="Add Score">
     </div>
-
 </form>

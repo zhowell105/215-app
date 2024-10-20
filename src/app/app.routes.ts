@@ -1,14 +1,18 @@
-import { Routes} from '@angular/router';
+import { Routes } from '@angular/router';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { InterestsComponent } from './interests/interests.component';
 import { ScoreTableComponent } from './score-table/score-table.component';
-import { ScoreFormComponent } from './score-form/score-form.component';
+import { GameDetailComponent } from './game-detail/game-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
-    {path: "app-profile-page", component: ProfilePageComponent},
-    {path: "app-interests", component: InterestsComponent},
-    {path: "scores", component: ScoreTableComponent},
-    {path: "score-form", component: ScoreFormComponent},
-    {path: '', redirectTo: '/profile', pathMatch: 'full'},
-    {path: '**', redirectTo: '/profile'},
+    { path: "app-profile-page", component: ProfilePageComponent },
+    { path: "app-interests", component: InterestsComponent },
+    { path: "scores", component: ScoreTableComponent },
+    // { path: "scores-form-beta", component: ScoresFormBetaComponent },
+    { path: "game-details/:id", component: GameDetailComponent },
+
+
+    { path: '', component: ProfilePageComponent, pathMatch: 'full' },
+    { path: '**', component: NotFoundComponent, title: 'Not Found' },
 ];
