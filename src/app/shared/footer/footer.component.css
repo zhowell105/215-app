@@ -1,0 +1,15 @@
+p {
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: bold;
+    text-indent: 15em;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 1em;
+    /* color: rgb(143,51,108); */
+    color: #8f336c;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    text-shadow: 2px 2px 4px yellow;
+}

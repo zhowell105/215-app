@@ -1,0 +1,35 @@
+nav ul {
+     list-style-type: none;
+     /* padding: 0;
+     margin: 0; */
+}
+
+nav ul li a{
+     text-decoration: none;
+     color:blue;
+     padding: 10px 14px;
+     display:block;
+
+}
+
+nav ul li a:hover{
+     background-color: #e4e4e4;
+     color:rgb(45, 53, 53);
+     font-weight: bold;
+     text-decoration: underline;
+}
+
+nav ul li a:active{
+     background-color: #12eaf1;
+     color:rgb(241, 255, 255);
+     font-weight: bold;
+     text-decoration: none;
+}
+
+nav ul li:last-child {
+     border-bottom: 2px solid black; /* Adjust the border size and color as needed */
+ }
+
+ nav ul li:first-child {
+     border-top: 2px dotted green; /* Adjust the border size and color as needed */
+ }

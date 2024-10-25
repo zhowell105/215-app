@@ -1,12 +1,14 @@
 
       <h1>Hello, {{ title }}</h1>
       <p>Today is {{day!}}. </p>
-      
-      <ul>
-            <li><a routerLink="/app-profile-page">My Profile Page</a></li>
-            <li><a routerLink="/app-interests">My Interests</a></li>
-            <li><a routerLink="/scores">Scores Table</a></li>
-      </ul>
+      <p>{{getTodayDate()}}</p>
+      <nav>
+            <ul>
+                  <li><a routerLink="/app-profile-page">My Profile Page</a></li>
+                  <li><a routerLink="/app-interests">My Interests</a></li>
+                  <li><a routerLink="/scores">Scores Table</a></li>
+            </ul>
+      </nav>
    <app-footer></app-footer>
 
 
