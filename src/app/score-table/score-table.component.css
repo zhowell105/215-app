@@ -1,16 +1,24 @@
-table {
-    border: 1px solid black;
+table{
+    background-color: rgb(255, 255, 252);
+    border-width: 1px; /* Ensure border width is set */
+    border-style: solid; /* Ensure border style is set */
+    border-color: rgb(255, 255, 255);
+    color: #000000; /* Change this to your desired text color */
 }
 
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-    
+th{
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: rgb(60, 232, 255);
+    color: black;
 }
 
-thead th{
-    background-color: #4CAF50;
-    color: white;
-    border: 1px solid black;
-    font-weight: normal;
+td{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: rgb(60, 232, 255);
+    color: black;
 }
+
+
 

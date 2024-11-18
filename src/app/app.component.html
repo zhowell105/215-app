@@ -1,12 +1,15 @@
-
-      <h1>Hello, {{ title }}</h1>
+<h1 class="mat-display-medium">{{title}}</h1>
+      <!-- <h1>Hello, {{ title }}</h1> -->
       <p>Today is {{day!}}. </p>
       <p>{{getTodayDate()}}</p>
       <nav>
             <ul>
-                  <li><a routerLink="/app-profile-page">My Profile Page</a></li>
-                  <li><a routerLink="/app-interests">My Interests</a></li>
-                  <li><a routerLink="/scores">Scores Table</a></li>
+                  <li><a routerLink="/app-profile-page" routerLinkActive="active">My Profile Page</a></li>
+                  <li><a routerLink="/app-interests" routerLinkActive="active">My Interests</a></li>
+                  <li><a routerLink="/scores" routerLinkActive="active" matBadge="4">Scores Table </a></li>
+                  <li><a routerLink="/css-playground" routerLinkActive="active">Playground</a></li>
+                  <li><a routerLink="/css-positioning" routerLinkActive="active">Positioning</a></li>
+                  <li><a routerLink="/citations" routerLinkActive="active">Citations</a></li>
             </ul>
       </nav>
    <app-footer></app-footer>

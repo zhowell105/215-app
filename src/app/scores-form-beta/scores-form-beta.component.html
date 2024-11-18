@@ -1,12 +1,16 @@
 <h3>Add a Score</h3>
 <form [formGroup]="scoreForm" (ngSubmit)="OnSubmit()">
     <div>
-        <label for="week">Week</label>
-        <input type="number" id="week" formControlName="week">
+        <!-- <mat-form-field> -->
+            <mat-label for="week">Week</mat-label>
+            <input matInput type="number" id="week" formControlName="week">
+        <!-- </mat-form-field> -->
     </div>
     <div>
-        <label for="opponent">Opponent</label>
-        <input type="text" id="opponent" formControlName="opponent">
+        <!-- <mat-form-field> -->
+            <mat-label for="opponent">Opponent</mat-label>
+            <input matInput type="text" id="opponent" formControlName="opponent">
+        <!-- </mat-form-field> -->
     </div>
     <div>
         <label for="ourScore">Our Score</label>
@@ -21,6 +25,7 @@
         <input type="text" id="outstandingPlayers" formControlName="outstandingPlayers">
     </div> 
     <div>
-        <input type="submit" value="Add Score">
+        <!-- <input type="button" class="mat-flat-button" value="Add Score"> -->
+        <button mat-flat-button>Add Score</button>
     </div>
 </form>

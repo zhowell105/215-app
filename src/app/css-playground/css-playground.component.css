@@ -1,0 +1,7 @@
+.box-model-demo{
+    background-color: beige;
+    border: 1px solid burlywood;
+    padding: 10px 20px 30px;
+    margin: 10px;
+
+}

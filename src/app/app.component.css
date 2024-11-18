@@ -26,10 +26,43 @@ nav ul li a:active{
      text-decoration: none;
 }
 
-nav ul li:last-child {
+/* nav ul li:last-child {
      border-bottom: 2px solid black; /* Adjust the border size and color as needed */
- }
+ /* } */ 
 
  nav ul li:first-child {
      border-top: 2px dotted green; /* Adjust the border size and color as needed */
+ }
+
+ nav {
+     background-color: gray;
+ }
+ 
+ nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+ }
+ 
+ nav ul li {
+     flex: 1;
+     text-align: center;
+ }
+ 
+ nav ul li a {
+     display: block;
+     padding: 10px;
+     text-decoration: none;
+     color: white;
+ }
+ 
+ nav ul li a:hover {
+     background-color: #e4e4e4;
+     color: black;
+ }
+ 
+ nav ul li a.active {
+     background-color: rgb(13, 228, 181);
+     color: white;
  }

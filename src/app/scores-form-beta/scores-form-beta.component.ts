@@ -1,14 +1,17 @@
 import { Component, inject, OnInit} from '@angular/core';
-import {FormControl,FormGroup,ReactiveFormsModule } from '@angular/forms';
+import {FormControl,FormGroup,FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { Game } from '../score-table/score-table.component';
 import { GameDataService } from '../game-data.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
 @Component({
   selector: 'app-scores-form-beta',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatButtonModule, MatFormFieldModule, FormsModule, MatInputModule],
   templateUrl: './scores-form-beta.component.html',
   styleUrls: ['./scores-form-beta.component.css']
 })

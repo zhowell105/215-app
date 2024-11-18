@@ -8,16 +8,20 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
 import { ScoreTableComponent } from './score-table/score-table.component';
 import { ScoresFormBetaComponent } from './scores-form-beta/scores-form-beta.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CssPlaygroundComponent } from './css-playground/css-playground.component';
+import { CssPositioningComponent } from './css-positioning/css-positioning.component';
+import { MatBadgeModule } from '@angular/material/badge';
+import { CitationsComponent } from './citations/citations.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, InterestsComponent, ProfilePageComponent, ScoreTableComponent, ScoresFormBetaComponent, FooterComponent, RouterLink, CommonModule, GameDetailComponent, NotFoundComponent],
+  imports: [RouterModule, InterestsComponent, ProfilePageComponent, ScoreTableComponent, ScoresFormBetaComponent, FooterComponent, RouterLink, CommonModule, GameDetailComponent, NotFoundComponent, CssPlaygroundComponent, CssPositioningComponent, MatBadgeModule, CitationsComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Zoe';
+  title = "Zoe' Howell";
   day!: string;
 
   ngOnInit() {

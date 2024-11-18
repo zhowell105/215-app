@@ -1,14 +1,50 @@
 <h1>Trojan Scores</h1>
 <app-scores-form-beta></app-scores-form-beta>
-<table>
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>Opponent</th>
-            <th>Score</th>
-            <th>Best</th>
-        </tr>
-    </thead>
+
+<table mat-table [dataSource]="games">
+    <ng-container matColumnDef="week">
+        <th mat-header-cell *matHeaderCellDef>Week</th>
+        <td mat-cell *matCellDef="let game">{{game.week}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="opponent">
+        <th mat-header-cell *matHeaderCellDef>Opponent</th>
+        <td mat-cell *matCellDef="let game">{{game.opponent}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="score">
+        <th mat-header-cell *matHeaderCellDef>Score</th>
+        <td mat-cell *matCellDef="let game">{{game.ourScore}}-{{game.theirScore}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="outstandingPlayer">
+        <th mat-header-cell *matHeaderCellDef>Best Player</th>
+        <td mat-cell *matCellDef="let game">{{game.outstandingPlayer}}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="narrative">
+        <th mat-header-cell *matHeaderCellDef>Narrative</th>
+        <td mat-cell *matCellDef="let game">{{generateNarrative(game)}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="record">
+        <th mat-header-cell *matHeaderCellDef>Recent Record</th>
+        <td mat-cell *matCellDef="let game; let i=index">{{generateRecord(i,4)}}</td>
+        <!-- index starts at 0. We write is following the (startPint, setSize). We told the server to put 2 inputs here, hence the two values of i and 3; anything less will break it. -->
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="gameColumns"></tr> 
+    <tr mat-row *matRowDef="let row; columns: gameColumns;"></tr>
+
+        <!-- <thead>
+            <tr>
+                <th>Week</th>
+                <th>Opponent</th>
+                <th>Score</th>
+                <th>Best</th>
+            </tr>
+        </thead>
     <tbody>
         <tr *ngFor="let game of games">
             <td>{{game.week}}</td>
@@ -17,8 +53,16 @@
             <td>{{game.outstandingPlayer}}</td>
             <td> <a [routerLink]="['/game-details', game.id]">Details</a></td>
         </tr>
-    </tbody>
+    </tbody> -->
 </table>
+<p *ngIf="games.data.length === 0">No games have been added yet</p>
+
+<!-- <p *ngIf="games.length === 0">No games have been added yet</p> -->
+
+
+
+
+
 <!-- <table>
     <caption>Trojan Football Scores</caption>
     <thead>
